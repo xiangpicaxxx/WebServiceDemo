@@ -1,0 +1,26 @@
+dlg:
+    datasource:
+        schema: dlg_ssd
+server:
+    port: 6878
+spring:
+    webservices:
+        path: /ws
+    jackson:
+        default-property-inclusion: ALWAYS
+    application:
+        name: DLG-FM-SSD-M
+    cloud:
+        config:
+            name: common,springDruid,springRedis,spring,mapper,admin,fmEureka,rabbitmq,mongodb
+            uri: http://zyyconfig.dlg-property.com
+
+    main:
+        allow-bean-definition-overriding: true
+logging:
+    level:
+        com:
+            dlg: debug
+        com.dlg.feign: debug
+
+
